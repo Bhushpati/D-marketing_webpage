@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-Marketing Website</title>
+    <link href="index.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    img {
+      width: 100%;
+      height: 100vh;
+    }
+
+    nav {
+      width: 100%;
+      height: 75px;
+      line-height: 75px;
+      padding: 0px 100px;
+      position: fixed;
+      background-color: #d12c34;
+      margin-top: -120px;
+      box-shadow: 0 0 15px rgb(7, 0, 0);
+    }
+
+    #item {
+      font-size: 25px;
+      font-weight: bold;
+      float: left;
+      color: #fff;
+      text-transform: none;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      font-family: "Roboto", sans-serif;
+      margin-left: -43px;
+    }
+
+    #item:hover {
+      font-size: 26px;
+      color: white;
+      transition: all 0.4s ease 0s;
+    }
+
+    nav ul {
+      float: right;
+    }
+
+    nav li {
+      display: inline-block;
+      list-style: none;
+    }
+
+    nav li a {
+      font-size: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 0px 30px;
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      ;
+      font-family: "Poppins", sans-serif;
+    }
+
+    nav li a:hover {
+      color: white;
+      transition: all 0.4s ease 0s;
+      font-size: 18px;
+    }
+
+    #bar {
+      border-radius: 10px;
+    }
+
+    /* Style sections */
+    section {
+      margin-top: 30px;
+      padding: 70px;
+      margin: 20px;
+      background-color: #f7f7f7;
+      font-family: 'League Spartan', sans-serif;
+    }
+
+    .wlc {
+      font-size: 40px;
+      font-family: Impact, sans-serif;
+      letter-spacing: 2.05px;
+      color: #4f4e4e;
+      font-weight: bolder;
+    }
+
+    .wlc:hover {
+      font-size: 43px;
+      font-family: Impact, sans-serif;
+      letter-spacing: 2.05px;
+      transition: all 0.2s ease 0s;
+      color: #4f4e4e;
+    }
+
+    .p {
+      font-size: 20px;
+      color: rgb(196, 40, 40);
+      font-weight: bold;
+    }
+
+    /* Style call-to-action button */
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: rgb(230, 90, 90);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 25px
+    }
+
+    .home-content .cta-button:hover {
+      font-size: 25px;
+      transition: all 0.4s ease 0s;
+      background-color: rgb(0, 249, 0);
+    }
+
+    /* Style the form */
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      font-family: 'League Spartan', sans-serif;
+    }
+
+    label,
+    input,
+    textarea {
+      display: block;
+      margin-bottom: 10px;
+      padding: 5px 5px;
+      outline: none;
+      border-radius: 5px;
+      padding-right: 200px;
+      margin-right: 200px;
+    }
+
+    button {
+      background-color: rgb(0, 211, 28);
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .btnsub:hover {
+      font-size: 18px;
+      transition: all 0.4s ease 0s;
+    }
+
+    /* Style the footer */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      font-family: 'League Spartan', sans-serif;
+    }
+
+    #home {
+      margin-top: 120px;
+      display: flex;
+      background-image: url(images/bkg.jpg);
+      width: 98% !important;
+    }
+
+    .mobile {
+      height: 350px;
+      width: 371px;
+      margin-left: 190px;
+      margin-right: -200px;
+      margin-top: -32px;
+    }
+
+    .mobile:hover {
+      height: 370px;
+      width: 392px;
+      transition: all 0.2s ease 0s;
+    }
+
+    .home-content {
+      margin-top: 83px;
+      margin-left: -26px;
+    }
+
+    .ours:hover {
+      font-size: 27px;
+      transition: all 0.4s ease 0s;
+      color: rgb(222, 15, 32);
+    }
+
+    .port:hover {
+      font-size: 38px;
+      transition: all 0.4s ease 0s;
+      color: rgb(222, 15, 32);
+    }
+
+    .cont:hover {
+      font-size: 20px;
+      transform: scale(1.1);
+      transition: all 0.2s ease 0s;
+      color: rgb(255, 255, 255);
+    }
+
+    /* portfolio */
+    .porting {
+      display: flex;
+      margin-top: 50px;
+    }
+
+    .port {
+      text-align: center;
+      font-size: 35px;
+    }
+
+    .pro1 {
+      padding-left: 5%;
+      padding-right: 35%;
+    }
+
+    .pro11 {
+      width: 300px;
+      height: 350px;
+      box-shadow: #333 -1px 1px 20px 3px;
+    }
+
+    .pro111 {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .pro11:hover {
+      width: 310px;
+      height: 360px;
+      transition: all 0.2s ease 0s;
+    }
+
+    .pro2 {
+      padding-left: 40%;
+      padding-right: 10%;
+    }
+
+    .pro22 {
+      width: 300px;
+      height: 350px;
+      box-shadow: #333 -1px 1px 22px 3px;
+    }
+
+    .pro222 {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .pro22:hover {
+      width: 310px;
+      height: 360px;
+      transition: all 0.2s ease 0s;
+    }
+
+    .porting2 {
+      display: flex;
+      margin-top: 100px;
+    }
+
+    .pro3 {
+      padding-left: 5%;
+      padding-right: 35%;
+    }
+
+    .pro33 {
+      width: 300px;
+      height: 350px;
+      box-shadow: #333 -1px 1px 22px 3px;
+    }
+
+    .pro333 {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .pro33:hover {
+      width: 310px;
+      height: 360px;
+      transition: all 0.2s ease 0s;
+    }
+
+    .pro4 {
+      padding-left: 40%;
+      padding-right: 10%;
+    }
+
+    .pro44 {
+      width: 300px;
+      height: 350px;
+      box-shadow: #333 -1px 1px 22px 3px;
+    }
+
+    .pro444 {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .pro44:hover {
+      width: 310px;
+      height: 360px;
+      transition: all 0.2s ease 0s;
+    }
+
+    #section-service {
+      text-align: none;
+      height: 650px;
+      margin: 0px;
+    }
+
+    .seviceimg {
+      position: static;
+      text-align: left;
+      height: 500px;
+      width: 500px;
+    }
+
+    .seviceimg:hover {
+      height: 510px;
+      width: 510px;
+      transition: all 0.2s ease 0s;
+    }
+
+    .h1ser {
+      text-align: center;
+      font-size: 30px;
+      text-shadow: black;
+    }
+
+    .h1ser:hover {
+      font-size: 32px;
+      transition: all 0.4s ease 0s;
+      color: rgb(222, 15, 32);
+    }
+
+    .titleser {
+      display: flex;
+    }
+
+    .servicelist {
+      height: 300px;
+      padding-top: 120px;
+      padding-left: 120px;
+      font-size: 25px;
+      font-weight: 200;
+      font-family: 'League Spartan', sans-serif;
+      margin-left: 100px;
+    }
+
+    #manymore {
+      text-decoration: none;
+      color: white;
+    }
+
+    #manymore:hover {
+      font-size: 15px;
+      transition: all 0.4s ease 0s;
+      color: white;
+    }
+
+    /* about us */
+    #about h1 {
+      font-size: 30px;
+    }
+
+    #about h1:hover {
+      font-size: 25px;
+      transition: all 0.2s ease 0s;
+      color: rgb(222, 15, 32);
+      ;
+    }
+
+    .insta:hover {
+      transform: scale(1.2);
+      /* Increase size on hover */
+    }
+
+    .fb:hover {
+      transform: scale(1.2);
+      /* Increase size on hover */
+    }
+
+    .lnkd:hover {
+      transform: scale(1.2);
+      /* Increase size on hover */
+    }
+
+    .twt:hover {
+      transform: scale(1.2);
+      /* Increase size on hover */
+    }
+
+    .quick {
+      margin-top: 40px;
+      margin-left: 50px;
+      font-family: roboto, sans-serif;
+    }
+
+    .ql {
+      border-bottom: 4px dotted;
+      border-color: #4f4e4e;
+      width: 40%;
+      font-size: 35px;
+      font-family: roboto, sans-serif;
+    }
+
+    .rd {
+      font-size: 35px;
+      text-align: center;
+      color: black;
+    }
+
+    .rd:hover {
+      color: #d12c34;
+      transform: scale(1.2);
+    }
+
+    .tech1 {
+      font-size: 17px;
+      font-family: 'Gill Sans', 'Gill S ans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: justify;
+      margin-left: 50px;
+      width: 100%;
+      font-size: 20px;
+      line-height: 25px;
+      width: 90%
+    }
+  </style>
+  <body>
+    <div class="main">
+      <nav id="line">
+        <div class="logo">
+          <p id="item">D-Marketing Services</p>
+        </div>
+        <ul id="bar">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#section-service">Services</a>
+          </li>
+          <li>
+            <a href="#portfolio">portfolio</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#contact">Contact us</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="mainhome">
+        <section id="home">
+          <div class="home-content">
+            <h1 class="wlc">Welcome to Our Digital Marketing Services</h1>
+            <br>
+            <br>
+            <p class="p">We help businesses grow their online presence and reach their target audience.</p>
+            <br>
+            <br>
+            <a href="#contact" class="cta-button">Get Started</a>
+          </div>
+          <div></div>
+        </section>
+      </div>
+      <!-- 
+        - #SERVICE
+      -->
+      <section id="section-service">
+        <h1 class="h1ser">Services we Provided</h1>
+        <br>
+        <div class="titleser">
+          <img class="seviceimg" src="images/serv.jpeg">
+          <div class="servicelist">
+            <ul>
+              <li>SEO Optimization</li>
+              <br>
+              <br>
+              <li>Social Media Marketing</li>
+              <br>
+              <br>
+              <li>Content Marketing</li>
+              <br>
+              <br>
+              <li>Website Enhancement</li>
+              <br>
+              <br>
+              <button id="manymore" href="https://hennessey.com/digital-marketing-services/what-are-the-major-marketing-services/"> Many more</button>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Portfolio -->hit <section id="portfolio">
+        <h2 class="port">Portfolio</h2>
+        <br>
+        <br>
+        <div class="porting">
+          <div class="pro1">
+            <img class="pro11" src="images/project-3.jpg">
+            <br>
+            <br>
+            <p class="pro111">SEO Optimization</p>
+            <br>
+            <p>Desining a better Cinema experience</p>
+          </div>
+          <div class="port2">
+            <img class="pro22" src="images/project-4.jpg">
+            <br>
+            <br>
+            <p class="pro222">Digital Marketing</p>
+            <br>
+            <p> Building design process within teams</p>
+          </div>
+        </div>
+        <div class="porting2">
+          <div class="pro3">
+            <img class="pro33" src="images/project-1.jpg">
+            <br>
+            <br>
+            <p class="pro333">Email Marketing</p>
+            <br>
+            <br>
+            <p> Free up to 300 emails and unlimited contacts.</p>
+          </div>
+          <div class="port4">
+            <img class="pro44" src="images/project-2.jpg">
+            <br>
+            <br>
+            <p class="pro444">Social Media Marketing</p>
+            <br>
+            <br>
+            <p>Connect all over platform to grow bussiness</p>
+          </div>
+        </div>
+      </section>
+      <!-- About us section -->
+      <section id="about" style="margin: 0;">
+        <h1 style="text-align: center; margin-bottom: 15px;">About us</h1>
+        <br>
+        <br>
+        <br>
+        <div style="display: flex; align-items:normal">
+          <p style="font-size:17px; 
+                  font-family:'Gill Sans','Gill S   ans MT', Calibri, 'Trebuchet MS', sans-serif;
+                  text-align: justify;"> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+          <img src="images/abtus1.png" style="margin-left: 200px; margin-right: 100px; height: 330px; width: 400px; margin-top: -100px;">
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div style="display: flex; align-items:center;">
+          <img src="images/aboutus2.jpg" style="height: 290px; margin-left: 20px; width:450px; margin-right:300px; margin-top: -100px;">
+          <p style="font-size:17px; 
+                font-family:'Gill Sans','Gill S   ans MT', Calibri, 'Trebuchet MS', sans-serif;
+                  text-align: justify;
+                  margin-top:-130px;"> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc. </p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <section id="contact" style="margin: 0; display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap; background-image: url(images/contact.png);">
+      <div style="flex: 1; text-align: left; background-image: url(images/png.jpg); border-radius: 15px; border-style:ridge; padding-top: 20px;">
+        <h2 class="cont" style="font-size: 30px; text-align: center; color:aliceblue;">Contact Us</h2>
+        <br>
+        <br>
+        <br>
+        <br>
+        <i class="fa fa-phone" style="color: #fff; font-size: 20px; padding-left: 100px; margin-bottom: 20px;">&nbsp;&nbsp; <a href="tel:0100200860" style="color: #fff;">010-020-0860</a>
+        </i>
+        <i class="fa fa-envelope" style=" color: #fff;font-size: 20px;padding-left: 100px;">&nbsp;&nbsp; <a href="mailto:info@company.com" style="color: #fff;">info@company.com</a>
+        </i>
+        <br>
+        <i class="fa fa-map-marker" style=" color: #fff; font-size: 20px;padding-left: 100px;">&nbsp;&nbsp; <a href="Driving Direction" style="color: #fff;">Driving Direction</a>
+        </i>
+        <br>
+        <br>
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.141936631836!2d153.0069562747643!3d-27.464840216497915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9150abedfe920b%3A0xf02a35bd721b500!2sSuncorp%20Stadium!5e0!3m2!1sen!2sin!4v1696298636843!5m2!1sen!2sin" width="450" height="300" style="border: 3; display: block; margin: 0 auto;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade;"></iframe>
+        <br>
+        <br>
+      </div>
+      <div style="flex: 1; padding: 20px; text-align: center;">
+        <form>
+          <label for="name">
+            <b>Name:</b>
+          </label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">
+            <b>Email:</b>
+          </label>
+          <input type="email" id="email" name="email" required>
+          <label for="phone">
+            <b>Phone:</b>
+          </label>
+          <input type="phone" id="phone" name="phone" required>
+          <label for="message">
+            <b>Message:</b>
+          </label>
+          <textarea id="message" name="message" required></textarea>
+          <button class="btnsub" type="submit">Send Message Now</button>
+        </form>
+      </div>
+    </section>
+    <div class="quick">
+      <div class="ql">Quick Links</div>
+      <br>
+      <br>
+      <div>
+        <a href="https://www.instagram.com/" target="_blank">
+          <img class="insta" src="images/insta.png" style="height: 40px; width: 40px; margin-right: 20px; transition: transform 0.3s ease, transition-delay 0.25s;">
+        </a>
+        <a href="https://www.facebook.com/" target="_blank">
+          <img class="fb" src="images/fb.png" style="height: 40px; width: 40px; margin-right: 20px; transition: transform 0.3s ease, transition-delay 0.25s;">
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank">
+          <img class="lnkd" src="images/linkedin.png" style="height: 40px; width: 40px; margin-right: 20px; transition: transform 0.3s ease, transition-delay 0.25s;">
+        </a>
+        <a href="https://www.x.com/" target="_blank">
+          <img class="twt" src="images/twt.png" style="height: 40px; width: 40px; transition: transform 0.3s ease, transition-delay 0.25s;">
+        </a>
+      </div>
+      <br>
+      <br>
+      <p>
+        <a href="#">Privacy Policy</a>
+      </p>
+      <br>
+      <p>
+        <a href="#">Trem and Conditions</a>
+      </p>
+      <br>
+      <p>
+        <a href="#">Returns / cancellation</a>
+      </p>
+      <br>
+      <p>
+        <a href="#">Policy</a>
+      </p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <footer>
+      <p>&copy; Made by Bhushan Patil </p>
+    </footer>
+  </body>
+</html>
